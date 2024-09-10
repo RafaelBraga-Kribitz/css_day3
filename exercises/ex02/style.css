@@ -1,48 +1,123 @@
-/* style.css */
-
-/* Basic reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-}
-
-/* Container styling */
-div {
-    margin-bottom: 10px;
-}
-
-/* Line styling */
-div > div {
-    border-bottom: 1px solid #000;
-    margin: 10px 0;
-}
-
-/* Flexbox properties for sections */
-div > div > div {
+  }
+  
+  .nutrition-container {
+    max-width: 400px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Flexbox layout for each section */
+.section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+
+  .section p {
+    margin: 4px 0;
+  }
+
+  .title-section {
+    text-align: left;
+    border-bottom: 13px solid black;
+  }
+  
+  .title-section::first-line {
+    font-weight:900;
+  }
+
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .section p {
+    margin: 4px 0;
+  }
+  
+  .percentage {
+    width: 60px;
+    text-align: right;
+  }
+  
+  .calories-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+  }
+  
+  .calories-section p {
+    width: 33%;
+    text-align: center;
+  }
+  
+  .notes-section {
+    border-top: 2px solid black;
+    padding-top: 10px;
+  }
+  
+  .daily-values-table {
+    margin-top: 10px;
+    border: 1px solid black;
+  }
+  
+  .daily-values-table .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+  }
+  
+  .daily-values-table .row p {
+    margin: 4px 0;
+  }
+  
+  .daily-values-table .row:last-child {
+    border-bottom: none;
+  }
+  
+  .calories-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  /* Target the first <p> element in each .section */
+.section p:first-child {
+  text-align: left;
+  flex-grow: 1;
+  flex-basis: 70%;
 }
 
-/* Text styling */
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Target the subsequent <p> elements (the right-aligned ones) */
+.section p:not(:first-child) {
+  text-align: right;
+  flex-grow: 1;
+  flex-basis: 15%;
 }
 
-p {
-    margin-bottom: 5px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    div > div > div {
-        flex-direction: column;
+@media (max-width: 400px) {
+    .section {
+      flex-wrap: wrap;
     }
-}
+  
+    .calories-section p {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

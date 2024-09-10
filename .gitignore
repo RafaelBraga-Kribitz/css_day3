@@ -32,24 +32,24 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Git merge conflict files
-*.orig
+# # Git merge conflict files
+# *.orig
 
-# Git commit message files
-COMMIT_EDITMSG
-MERGE_HEAD
-MERGE_MSG
+# # Git commit message files
+# COMMIT_EDITMSG
+# MERGE_HEAD
+# MERGE_MSG
 
-# Ignore patch files
-*.patch
+# # Ignore patch files
+# *.patch
 
-# Git LFS files
-.gitattributes
-.git/lfs/*
+# # Git LFS files
+# .gitattributes
+# .git/lfs/*
 
-# Ignore Git hooks
-.git/hooks/*
+# # Ignore Git hooks
+# .git/hooks/*
 
-# Ignore local Git configurations
-.git/config
-.git/refs/*
+# # Ignore local Git configurations
+# .git/config
+# .git/refs/*
