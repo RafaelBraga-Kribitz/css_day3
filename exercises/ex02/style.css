@@ -1,0 +1,48 @@
+/* style.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container styling */
+div {
+    margin-bottom: 10px;
+}
+
+/* Line styling */
+div > div {
+    border-bottom: 1px solid #000;
+    margin: 10px 0;
+}
+
+/* Flexbox properties for sections */
+div > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Text styling */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    div > div > div {
+        flex-direction: column;
+    }
+}

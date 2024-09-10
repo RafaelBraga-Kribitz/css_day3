@@ -1,0 +1,12 @@
+/* debug.css */
+* {
+    border: 2px solid;
+    border-color: rgb(
+        calc(255 * (1 - var(--rand1))),
+        calc(255 * (1 - var(--rand2))),
+        calc(255 * (1 - var(--rand3)))
+    );
+    --rand1: calc(var(--seed1, 1) * 0.1);
+    --rand2: calc(var(--seed2, 1) * 0.2);
+    --rand3: calc(var(--seed3, 1) * 0.3);
+}
